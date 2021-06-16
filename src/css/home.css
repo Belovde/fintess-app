@@ -1,0 +1,108 @@
+.banner {
+  width: 100%;
+  height: 200px;
+}
+.swiper-container {
+  width: 100%;
+  height: 200px;
+}
+.main {
+  padding: 15px;
+  overflow-y: scroll;
+}
+.box-continar {
+  width: 100%;
+  height: 150px;
+}
+.box-continar .pai {
+  width: 30%;
+  height: 150px;
+  background: #1592CC;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  border-radius: 20px;
+  color: aliceblue;
+}
+.box-continar .pai i {
+  font-size: 50px;
+  color: blue;
+}
+.box-continar .day {
+  width: 70%;
+  height: 150px;
+  background: #7BCBF5 100%;
+  margin-left: 22px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  border-radius: 20px;
+  color: aliceblue;
+}
+.box-continar .day i {
+  font-size: 50px;
+  color: blue;
+}
+.box-continar .day #carbtn {
+  width: 100px;
+  height: 40px;
+  background: blue;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  margin: auto;
+  display: block;
+}
+.box-continar1 {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+.box-continar1 .pai1 {
+  width: 50%;
+  height: 150px;
+  background-image: url('../img/course-img03.jpg');
+  border-radius: 20px;
+}
+.box-continar1 .day1 {
+  width: 70%;
+  height: 150px;
+  background-image: url('../img/index-swiper-bg3.jpg');
+  margin-left: 22px;
+  border-radius: 20px;
+}
+.box-continar1 .day1 i {
+  font-size: 50px;
+  color: blue;
+}
+.box1 {
+  width: 100%;
+  height: 110px;
+  background-image: url('../img/index-swiper-bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -8px;
+}
+.box1 p {
+  font-size: 20px;
+  color: aliceblue;
+  line-height: 40px;
+  margin-left: 10px;
+}
+.box2 {
+  width: 100%;
+  height: 110px;
+  background-image: url('../img/index-card-run.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -8px;
+}
+.box2 p {
+  font-size: 20px;
+  color: aliceblue;
+  line-height: 40px;
+  margin-left: 10px;
+}

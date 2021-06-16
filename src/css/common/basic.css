@@ -1,3 +1,118 @@
 /*
  * 可复用的公有布局
  */
+.bg-container {
+  background: url('../../img/sign-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+}
+.panel {
+  position: relative;
+  margin: 0 5%;
+  width: 90%;
+  padding-top: 50px;
+  color: #fff;
+}
+.panel .jump {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.panel .box .inp {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border-radius: 25px;
+  text-indent: 25px;
+}
+.panel .box .inp::placeholder {
+  color: #fff;
+}
+.panel .box .yzm {
+  margin-left: 15px;
+  width: 123px;
+  height: 50px;
+  background: olive;
+}
+.panel .box .btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: rgba(99, 255, 167, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+.text-msg {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.title {
+  width: 100%;
+  height: 67px;
+  margin-bottom: 40px;
+}
+.title .title-text {
+  width: 100%;
+  height: 40px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+.title .title-msg {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #aaa;
+}
+/*toast 样式*/
+.toast {
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  padding: 15px;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: #fff;
+}
+.toast .icon {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 40px;
+}
+.toast .toast-text {
+  width: 100%;
+  height: 40px;
+  line-height: 20px;
+  text-align: center;
+  /*文本可支持换行数*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.footer {
+  width: 100%;
+  height: 77px;
+}
+.footer .nav {
+  width: 50px;
+  height: 40px;
+}
+.footer i {
+  font-size: 30px;
+}
+.footer .active {
+  color: blue;
+}

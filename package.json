@@ -1,14 +1,15 @@
 {
-  "name": "fitNess-app",
+  "name": "fitness-app",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/myGitHubYo1/fitness-app.git",
-  "author": "zcl0110 <695817124@qq.com>",
+  "repository": "https://github.com/cometang/fitness.git",
+  "author": "usernamema <mazhengwu@itsource.cn>",
   "license": "MIT",
   "scripts": {
     "serve": "webpack serve",
     "build": "webpack"
   },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "7.1.5",
