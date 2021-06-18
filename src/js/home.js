@@ -55,7 +55,7 @@ document.ready(function () {
   carBtnDom.addEventListener('click',function(ev){
     $http.get('/clockIn?userId='+user.userId,function(res){
       if(res.status===0){
-        utils.toast(1,'打卡成功')
+        utils.toast(1,'打卡成功');
          //打卡成功之后 重新拉取首页数据 重新渲染首页的所有数据
         getready();
 

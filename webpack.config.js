@@ -34,6 +34,7 @@ module.exports = {
         register: './src/js/register.js',
         sports:'./src/js/sports.js',
         about:'./src/js/about.js',
+        userInof:'./src/js/userInof.js',
     },
 
     //出口
@@ -137,6 +138,12 @@ module.exports = {
             template: './src/page/about.html',
             filename: 'about.html',
             chunks: ['about', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/userInof.html',
+            filename: 'userInof.html',
+            chunks: ['userInof', 'commonCSS', 'dom', 'http', 'utils']
         }),
 
 

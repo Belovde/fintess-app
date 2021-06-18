@@ -54,9 +54,14 @@
 .mb16 {
     margin-bottom: 16px;
 }
-
+.mb40 {
+    margin-bottom: 40px;
+}
 .ml12 {
     margin-left: 12px;
+}
+.ml40 {
+    margin-left: 40px;
 }
 
 .pd16 {
@@ -76,11 +81,26 @@
 .fs14 {
     font-size: 14px;
 }
-
+.fs16 {
+    font-size: 16px;
+}
 .fs18 {
     font-size: 18px;
 }
 
 .fs20 {
     font-size: 20px;
+}
+.fs40 {
+    font-size: 40px;
+}
+/* 颜色 */
+.cl8{
+    color: #8a8a8a;
+}
+.cl4{
+    color: #4294ff;
+}
+.bg{
+    background: #fff;
 }
