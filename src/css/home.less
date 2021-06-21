@@ -1,116 +1,153 @@
-.banner {
+/* 首页css样式 */
+*{
+    padding: 0;
+    margin: 0;
+}
+.banner{
     width: 100%;
     height: 200px;
-   
+    background: #E8E8E8 1%;
 }
 .swiper-container {
-    
     width: 100%;
     height: 200px;
-}  
-
-.main {
-    padding: 15px;
-    //滚动条
-    overflow-y: scroll;
+} 
+.swiper-container{
+    --swiper-theme-color: #3d3a3a;
+   /*  --swiper-pagination-color: #00ff33;/* 两种都可以 */ 
+  } 
+main{
+    padding: 20px 15px;
+    overflow-Y: scroll;
 }
-.box-continar{
+.rank{
+    justify-content: space-between;
     width: 100%;
     height: 150px;
-    .pai {
-        width: 30%;
-        height: 150px;
-        background: #1592CC ;
-        text-align: center;
-        line-height: 48px;
-        font-size: 20px;
-        border-radius: 20px;
-        color: aliceblue;
-        i{
-            font-size: 50px;
-            color: blue;
-        }
+  
+    /* align-items: center; */
+    .ranking{
+      /*   width: 150px;
+        height: 150px; */
+        height: 140px;
+       
+        background:#1592CC 100% url('../img/index-card-rank.png')no-repeat;
+        /* background: rgba(83, 118, 235,0.3); */
+        background-position: -12px 45px;
+        background-size: 75%;
+        padding: 13px;
+        border-radius: 15px;
+       span{
+           font-size: 18px;
+           color: #106186;
+           font-weight: 600;
+          
+       }
+       .ranknum{
+        color: #fff;
+        font-size: 50px;
+        text-align: right;
+        margin-top: 20px;
+       } 
+       
+
     }
-    .day {
-     
-        width: 70%;
-        height: 150px;
-        background: #7BCBF5 100%;
-        margin-left: 22px;
-        text-align: center;
-        line-height: 48px;
-        font-size: 20px;
-        border-radius: 20px;
-        color: aliceblue;
-        i{
-            font-size: 50px;
-            color: blue;
-        }
-        #carbtn{
+    .punch{
+       /*  width: 215px;*/
+        height: 140px; 
+       flex: 2;
+        margin-left: 20px;
+        background:#9ED9F7  url('../img/index-card-sum.png')no-repeat;
+       /*  background: rgb(152, 171, 206); */
+       background-position: 10px 24px;
+    background-size: 48%;
+        border-radius: 15px;
+        padding: 13px;
+        span{
+            font-size: 18px;
+           color: #05557B;
+           font-weight: 600;
+        } 
+
+        .today{
             width: 100px;
             height: 40px;
-            background: blue;
-            border-radius: 20px;
-            color: #fff;
+            line-height: 30px;
+            border-radius: 18px;
+          
+            color: rgba(0, 78, 115, 100);
+            font-size: 16px;
             text-align: center;
-            line-height: 40px;
-            margin: auto;
-            display: block;
+            border: 3px solid rgba(0, 81, 119, 100);
+            display: block; 
+            
         }
     }
 }
-.box-continar1{
+.tod{
     width: 100%;
-    height: 150px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
-    .pai1 {
-        width: 50%;
-        height: 150px;
-        background-image: url('../img/course-img03.jpg');
-        border-radius: 20px;
+    padding-left: 80px;
+    padding-top: 40px;
+}
+.datas{
+    width: 100%;
+    height: 110px;
+    justify-content: space-between;
+    .datanum{
+      flex: 1;
+        background: #442045 1%;
+        background: url('../img/index-card-data.png')no-repeat;
+        border-radius: 15px;
+        background-size: cover;
+        background-position: center 2px;
     }
-    .day1 {
-        width: 70%;
-        height: 150px;
-        background-image: url('../img/index-swiper-bg3.jpg');
-        margin-left: 22px;
-        border-radius: 20px;
-        i{
-            font-size: 50px;
-            color: blue;
+    .badge{
+        flex: 1;
+       margin-left: 20px;
+       background:#9DBDE3 1% url('../img/index-card-badge.png')no-repeat;
+       background-position: 6px 25px;
+       background-size: 45%;
+       /*  background: #9DBDE3 1%; */
+        border-radius: 15px;
+        padding: 13px;
+        span{
+            color: #005177;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .insigniaNum{
+            color: #004E73;
+        font-size: 60px;
+        text-align: right;
         }
     }
 }
-
-.box1{
-    width: 100%;
-    height: 110px;
-    background-image: url('../img/index-swiper-bg2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -8px;
-    p{
-        font-size: 20px;
-        color: aliceblue;
-        line-height: 40px;
-        margin-left: 10px;
-    }
-}
-.box2{
-    width: 100%;
-    height: 110px;
-    background-image: url('../img/index-card-run.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -8px;
-    p{
-        font-size: 20px;
-        color: aliceblue;
-        line-height: 40px;
-        margin-left: 10px;
-    };
+.texter{
+    margin-top: 12px;
+    margin-left: 14px;
 }
 
-
+.course{
+    width:100%;
+    height: 110px;
+    margin: auto;
+    background: #53464F 1%;
+    background: url('../img/index-swiper-bg2.jpg')no-repeat;
+    border-radius: 15px;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center -20px;
+    padding: 13px;
+}
+.runing{
+    width:100%;
+    height: 110px;
+    margin: auto;
+    background:#FBB7A2 1%;
+    background: url('../img/course-img02.png')no-repeat;
+    background-size: cover;
+    background-position: center -60px;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 13px;
+}

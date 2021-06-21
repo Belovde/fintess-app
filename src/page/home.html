@@ -12,47 +12,56 @@
     <div class="banner">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <img class="swiper-slide" src="../img/course-img01.jpg" alt="">
-                <img class="swiper-slide" src="../img/course-img02.png" alt="">
-                <img class="swiper-slide" src="../img/course-img03.jpg" alt="">
+                    <img class="swiper-slide" src="../img/index-swiper-bg1.jpg" alt="">
+                    <img class="swiper-slide" src="../img/index-swiper-bg2.jpg" alt="">
+                    <img class="swiper-slide" src="../img/index-swiper-bg3.jpg" alt="">
+               
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
+            
+          <!-- 如果需要导航按钮 -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>>  -->
+            
+         
         </div>
-        
     </div>
-    <div class="main flex1">
-        <div class="box-continar dpflex ">
-            <div class="pai">
-                <i class="iconfont iconchart"></i>
-               <div class="rank">今日排名</div>
-               <div>9</div>
+    <main class="flex1">
+        <!-- 今日排名 -->
+        <div class="rank dpflex">
+            <div class="ranking">
+                
+               <span>今日排名</span>
+               <div class="tbtb"></div>
+               <div class="ranknum">9</div>
             </div>
-            <div class="day">
-                <i class="iconfont iconpinci"></i>
-                <div class="clock">累计打卡</div>
-                <div id="carbtn">立即打卡</div>
-            </div>
-        </div>
-        <div class="box-continar1  dpflex mt20">
-            <div class="pai1">
-                运动数据
-            </div>
-            <div class="day1">
-                <i class="iconfont iconbadge"></i>
-                <div class="badge">累计运动徽章</div>
-                <div>3枚</div>
+            <div class="punch">
+                <span>累计打卡 <span class="punchday">23</span> 天</span>
+                <div class="tod"><div class="today">今日打卡</div></div>
             </div>
         </div>
-        <div class="box1  mt20">
-            <p>课程训练</p>
+        <!-- 运动数据 -->
+        <div class="datas dpflex mt20">
+            <div class="datanum cofff fs16">
+                <div class="tex texter">运动数据</div>
+            </div>
+            <div class="badge">
+               <span>累计运动徽章</span>
+               <div class="insigniaNum">3</div>
+            </div>
         </div>
-        <div class="box2  mt20">
-            <p>户外跑步</p>
+        <!-- 课程训练 -->
+        <div class="course cofff fs16">
+            <div class="tex2">课程训练</div>
         </div>
-      
-    </div>
+        <!-- 户外跑步 -->
+        <div class="runing cofff fs16">
+            <div class="tex3">户外运动</div>
 
+        </div>
+    </main>
+   
 </body>
 
 </html>

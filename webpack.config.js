@@ -25,16 +25,21 @@ module.exports = {
         utils: './src/js/common/utils.js',
         //三方插件
         captcha: './src/lib/captcha/captcha-mini.js',
-        swiper :'./src/lib/swiper/swiper-bundle.js',
+        swiper:'./src/lib/swipar/swiper-bundle.js',
+        weui:'./src/lib/weui/weui.js',
+
 
         //多页面应用 home模块
         home: './src/js/home.js',
         login: './src/js/login.js',
         advertisement: './src/js/advertisement.js',
         register: './src/js/register.js',
-        sports:'./src/js/sports.js',
         about:'./src/js/about.js',
-        userInof:'./src/js/userInof.js',
+        sports:'./src/js/sports.js',
+        personal:'./src/js/personal.js',
+        curriculum:'./src/js/curriculum.js',
+        player:'./src/js/player.js',
+        motionData:'./src/js/motionData.js',
     },
 
     //出口
@@ -105,14 +110,14 @@ module.exports = {
             //以哪个页面作为打包的页面模板--打包哪个页面
             template: './src/page/home.html',
             filename: 'home.html',
-            chunks: ['home', 'commonCSS','dom', 'http', 'utils','swiper']
+            chunks: ['home', 'commonCSS','dom','swiper','http','utils']
         }),
         //login.html
         new HtmlWebpackPlugin({
             //以哪个页面作为打包的页面模板--打包哪个页面
             template: './src/page/login.html',
             filename: 'login.html',
-            chunks: ['login', 'commonCSS', 'dom', 'http', 'utils']
+            chunks: ['login', 'commonCSS', 'dom','http','utils']
         }),
         // advertisement.html
         new HtmlWebpackPlugin({
@@ -125,26 +130,45 @@ module.exports = {
             //以哪个页面作为打包的页面模板--打包哪个页面
             template: './src/page/register.html',
             filename: 'register.html',
-            chunks: ['register', 'commonCSS', 'dom', 'http', 'captcha', 'utils']
-        }),
-        new HtmlWebpackPlugin({
-            //以哪个页面作为打包的页面模板--打包哪个页面
-            template: './src/page/sports.html',
-            filename: 'sports.html',
-            chunks: ['sports', 'commonCSS', 'dom', 'http', 'utils']
+            chunks: ['register', 'commonCSS', 'dom', 'http', 'captcha','utils']
         }),
         new HtmlWebpackPlugin({
             //以哪个页面作为打包的页面模板--打包哪个页面
             template: './src/page/about.html',
             filename: 'about.html',
-            chunks: ['about', 'commonCSS', 'dom', 'http', 'utils']
+            chunks: ['about', 'commonCSS', 'dom', 'http', 'captcha','utils']
         }),
         new HtmlWebpackPlugin({
             //以哪个页面作为打包的页面模板--打包哪个页面
-            template: './src/page/userInof.html',
-            filename: 'userInof.html',
-            chunks: ['userInof', 'commonCSS', 'dom', 'http', 'utils']
+            template: './src/page/sports.html',
+            filename: 'sports.html',
+            chunks: ['sports', 'commonCSS', 'dom', 'http', 'captcha','utils']
         }),
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/personal.html',
+            filename: 'personal.html',
+            chunks: ['personal', 'commonCSS', 'dom', 'http', 'captcha','utils','weui']
+        }),
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/curriculum.html',
+            filename: 'curriculum.html',
+            chunks: ['curriculum', 'commonCSS', 'dom', 'http', 'captcha','utils']
+        }),
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/player.html',
+            filename: 'player.html',
+            chunks: ['player', 'commonCSS', 'dom', 'http', 'captcha','utils']
+        }),
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/motionData.html',
+            filename: 'motionData.html',
+            chunks: ['motionData', 'commonCSS', 'dom', 'http', 'captcha','utils']
+        }),
+
 
 
 
@@ -159,7 +183,7 @@ module.exports = {
     //mode 环境
     //development 本地开发环境
     // production 线上生成环境
-    mode: "development",
+    mode:'development',
 
 
 

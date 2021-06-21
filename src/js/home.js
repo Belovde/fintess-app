@@ -6,62 +6,74 @@ require('../css/home.less');
 
 console.log('我是 home.js');
 document.ready(function () {
-      //domo节点获取
-  let rankDom = document.querySelector('.rank');
-  let clockDom = document.querySelector('.clock');
-  let badgeDom = document.querySelector('.badge');
-  let carBtnDom = document.querySelector('#carbtn');
+    let ranknum = document.querySelector('.ranknum');
+    let punchday = document.querySelector('.punchday');
+    let today = document.querySelector('.today')
+    let insigniaNum = document.querySelector('.insigniaNum')
+
+
+    let user = JSON.parse(localStorage.getItem('user'))
 
 
 
-  let user = JSON.parse(localStorage.getItem('user'));
+    utils.addicon('home')
 
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: true,
+        loop: true, // 循环模式选项
 
-  utils.addFooter('home');
-  
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
 
-  var mySwiper = new Swiper('.swiper-container', {
-    // direction: 'vertical', // 垂直切换选项
-    loop: true, // 循环模式选项
-    autoplay: true,
-    // 如果需要分页器
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  })
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
-  //请求ajax--首页数据
-  function getready (){
-    $http.get('/headPageInfo?userId='+user.userId,function(res) {
-
-      //判断是否成功拿到值
-      if(res.status == 0){
-        rankDom.textContent = res.data.rank;
-        clockDom.textContent = res.data.punchIn;
-        badgeDom.textContent = res.data.insigniaNum;
-      }
-      //判断是否显示/隐藏 打卡按钮
-      // 已经打卡
-      if(res.data.isPunch === 'true'){
-        carBtnDom.style.display = 'none';
-      }else{
-        carBtnDom.style.display = 'block';
-      }
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
     })
-  }
-  getready();
 
-  //点击立即打卡按钮
-  carBtnDom.addEventListener('click',function(ev){
-    $http.get('/clockIn?userId='+user.userId,function(res){
-      if(res.status===0){
-        utils.toast(1,'打卡成功');
-         //打卡成功之后 重新拉取首页数据 重新渲染首页的所有数据
-        getready();
 
-      }else{
-        utils.toast(0,'打卡失败')
-      }
+
+    function getInfo() {
+        $http.get('/headPageInfo?userId=' + user.userId, function (res) {
+            if (res.status == 0) {
+                ranknum.textContent = res.data.rank
+                punchday.textContent = res.data.punchIn
+                insigniaNum.textContent = res.data.insigniaNum
+
+ /* 判断是否打卡 打卡提示框隐藏或者显示*/
+                if (res.data.isPunch === "true") {
+                    today.style.display = 'none'
+                } else {
+                    today.style.display = 'block'
+                }
+            }
+           
+           
+
+        })
+    }
+    getInfo()
+
+    today.addEventListener('click', function (ev) {
+        $http.get('/clockIn?userId=' + user.userId, function (res) {
+            /* 判断打卡成功就显示成功提示框 打卡失败就显示提示失败框*/
+            if (res.status == 0) {
+                //调用弹出框
+                utils.toast(1,'打卡成功',2)
+               //成功后调用函数 重新渲染页面
+                getInfo()
+            } else {
+                utils.toast(0, res.msg,2);
+            }
+        })
     })
-  })
+
 })

@@ -11,15 +11,19 @@
 .flexcol {
     flex-direction: column;
 }
-.flexadd{
-    justify-content: space-around;
-}
-.flexcen{
-    align-items: center;
-}
+
 .dpnone {
     display: none;
+   
 }
+.jctsd{
+    justify-content: space-around;
+   
+}
+.alcter{
+    align-items: center;
+}
+
 
 .flex1 {
     flex: 1
@@ -54,14 +58,9 @@
 .mb16 {
     margin-bottom: 16px;
 }
-.mb40 {
-    margin-bottom: 40px;
-}
+
 .ml12 {
     margin-left: 12px;
-}
-.ml40 {
-    margin-left: 40px;
 }
 
 .pd16 {
@@ -73,7 +72,9 @@
 }
 
 /* 字号 */
-
+.fs8 {
+    font-size: 8px;
+}
 .fs12 {
     font-size: 12px;
 }
@@ -84,6 +85,7 @@
 .fs16 {
     font-size: 16px;
 }
+
 .fs18 {
     font-size: 18px;
 }
@@ -91,16 +93,19 @@
 .fs20 {
     font-size: 20px;
 }
-.fs40 {
-    font-size: 40px;
+/* 字体加粗 */
+.fwbder{
+    font-weight: bolder;
 }
 /* 颜色 */
-.cl8{
-    color: #8a8a8a;
+.cofff{
+    color: #fff;
+   
+  
 }
-.cl4{
-    color: #4294ff;
+.co9e{
+    color: rgb(126, 125, 125) ;
 }
-.bg{
-    background: #fff;
+.co98{
+    color: #98CDF8;
 }

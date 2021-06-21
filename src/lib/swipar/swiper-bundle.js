@@ -9421,12 +9421,10 @@
   // Swiper Class
   var components = [Virtual$1, Keyboard$1, Mousewheel$1, Navigation$1, Pagination$1, Scrollbar$1, Parallax$1, Zoom$1, Lazy$1, Controller$1, A11y$1, History$1, HashNavigation$1, Autoplay$1, EffectFade, EffectCube, EffectFlip, EffectCoverflow, Thumbs$1];
   Swiper.use(components);
-
-  //挂载
-  window.Swiper = Swiper;
+  /* 挂载到window */
+     window.Swiper=Swiper;
   return Swiper;
 
 })));
 //# sourceMappingURL=swiper-bundle.js.map
-//引入css
 require('./swiper-bundle.css');

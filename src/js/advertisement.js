@@ -19,7 +19,7 @@ document.ready(function () {
             // 清除定时器
             clearInterval(timer);
             //跳转页面
-            location.href = './login.html'
+            location.href = './register.html'
         } else {
             let num = parseInt(timeNumDom.textContent) - 1;
             //渲染页面 将最新的时间 渲染回去
@@ -31,7 +31,7 @@ document.ready(function () {
     /* 点击跳转 */
     timeBtn.addEventListener('click', function (ev) {
         //跳转页面
-        location.href = './login.html'
+        location.href = './register.html'
     })
 
 
